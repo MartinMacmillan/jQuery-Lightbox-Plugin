@@ -7,7 +7,7 @@ This plugin was written a few years ago, mostly for fun. It provides a modal-sty
 
 # Demo
 
-A basic demo of the plugin's functionality can be found at: http://martinmacmillan/jq-lightbox-plugin/
+A basic demo of the plugin's functionality can be found at: http://martinmacmillan/jq-lightbox-plugin/, and includes all the core files necessary for legacy support.
 
 # Design Concerns
 
