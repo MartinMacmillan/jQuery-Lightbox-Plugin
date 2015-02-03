@@ -4,11 +4,11 @@ Version 1.0.0
 Martin Macmillan, 2015.
 */
 
-// Use of closure to feed in dependencies and provide scope
+// Use of closure to feed in dependencies and provide scope.
 (function (document, $, undefined) {
 	'use strict';
 
-	// The Lightbox class, itself
+	// The Lightbox class, itself.
 	$.fn.lightbox = function (options) {
 		var overlay = document.createElement('div'),
 			container = document.createElement('div'),
@@ -20,7 +20,7 @@ Martin Macmillan, 2015.
 		overlay.className = 'mm-lightbox-overlay';
 		container.className = 'mm-lightbox-container';
 
-		// Default config
+		// Default config.
 		config = $.extend({}, {
 			preload: [],
 			speed: 400,
@@ -28,7 +28,7 @@ Martin Macmillan, 2015.
 			animation: 'linear'
 		}, options);
 
-		// Native code for performance
+		// Native code for small performance increase.
 		function imgPreloader(imgArray) {
 			var i = 0,
 				imgArrayLen = imgArray.length,
@@ -41,6 +41,7 @@ Martin Macmillan, 2015.
 			return imagesLoaded = true;
 		}
 
+		// Removes elements from DOM.
 		function closeOverlay() {
 			$(overlay).on('click', function () {
 				$(container).add(img).remove();
@@ -54,6 +55,7 @@ Martin Macmillan, 2015.
 			});
 		}
 
+		// Appends elements to DOM.
 		function openOverlay() {
 			$(overlay).css({
 				'background-color': '#000',
@@ -115,8 +117,9 @@ Martin Macmillan, 2015.
 			closeOverlay();	
 		}
 
+		// Instantiate App.
 		function init(context) {
-			// Image Pre-Loader -- This is optional. Fill in your image urls for a better experience.
+			// Image pre-loader check -- This is optional. Fill in your image urls for a better experience.
 			if (config.preload.length) {
 				imgPreloader(config.preload);
 			} else {
@@ -128,7 +131,7 @@ Martin Macmillan, 2015.
 				e.preventDefault();
 				url = this.href;
 
-				// Wait for the full size images to be loaded before opening the overlay
+				// Wait for the full size images to be loaded before opening the overlay.
 				if (imagesLoaded) {
 					openOverlay();
 				}
