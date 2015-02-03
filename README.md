@@ -19,7 +19,9 @@ The plugin does apply unique CSS classes, however, which can be hooked onto and 
 
 # Plugin Usage
 
-Simply link the lightbox.min.js file to your HTML file, and then, within your script, append the method '.lightbox()' to the DOM element that contains your image gallery.
+Simply link the lightbox.min.js file to your HTML file, and then, within your own script, append the method '.lightbox()' to the DOM element that contains your image gallery. 
+
+The jQuery library is, obviously, a dependency, and must be linked before these files.
 
 # Optional Paramaters
 
