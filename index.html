@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Lightbox jQuery Plugin</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no" />
+	<meta name="description" content="A simple Lightbox plugin for jQuery" />
+	<meta name="keywords" content="jQuery, Plugin, Lightbox, Gallery, Martin Macmillan" />
+	<meta name="author" content="Martin Macmillan" />
+	<link rel="dns-prefetch" href="https://ajax.googleapis.com" />
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" />
+	<link href="css/foundation.min.css" rel="stylesheet" />
+	<link href="css/main.min.css" rel="stylesheet" />
+	<!--[if lt IE 9]>
+		<link href="css/ie8.css" rel="stylesheet" type="text/css" /> 
+		<script src="js/ie8-head.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<header>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1>Lightbox-Style Image Gallery</h1>
+				<h2>jQuery Plugin</h2>
+			</div>
+		</div>
+	</header>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<ul id="gallery" class="large-block-grid-4 medium-block-grid-4 small-block-grid-2">
+				<li><a href="img/full/full_daisy.jpg"><img src="img/th/th_daisy.jpg" title="Daisy" alt="A field of Daisies." /></a></li>
+				<li><a href="img/full/full_pink.jpg"><img src="img/th/th_pink.jpg" title="Pink Flowers" alt="Pink flowers with the sky above." /></a></li>
+				<li><a href="img/full/full_poppy.jpg"><img src="img/th/th_poppy.jpg" title="Poppy" alt="A single Poppy." /></a></li>
+				<li><a href="img/full/full_yellow.jpg"><img src="img/th/th_yellow.jpg" title="Yellow Flower" alt="Yellow flowers with the sky above." /></a></li>
+				<li><a href="img/full/full_tulips.jpg"><img src="img/th/th_tulips.jpg" title="Tulips" alt="A field of Tulips." /></a></li>
+				<li><a href="img/full/full_sunflower.jpg"><img src="img/th/th_sunflower.jpg" title="Sunflower" alt="A single Sunflower." /></a></li>
+				<li><a href="img/full/full_pink2.jpg"><img src="img/th/th_pink2.jpg" title="Pink Flower" alt="A single pink flower." /></a></li>
+				<li><a href="img/full/full_spring.jpg"><img src="img/th/th_spring.jpg" title="Spring" alt="The first signs of Spring." /></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<footer>
+		<div class="row">
+			<div class="large-12 columns">
+				<p>Copyright <a href="http://www.martinmacmillan.com/">Martin Macmillan</a>, 2013. This software is released under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons license</a>.<br />
+				Original source code can be found on <a href="#">GitHub</a>.<br />
+				All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+    (function (window, document, $, undefined) {
+    	// Optional image pre-load list
+		var imgs = [
+			'img/full/full_daisy.jpg',
+			'img/full/full_pink.jpg',
+			'img/full/full_pink2.jpg',
+			'img/full/full_poppy.jpg',
+			'img/full/full_spring.jpg',
+			'img/full/full_sunflower.jpg',
+			'img/full/full_tulips.jpg',
+			'img/full/full_yellow.jpg'
+		];
+
+		$(window).on('load', function () {
+			$(document.getElementById('gallery')).lightbox({preload: imgs});
+		});
+
+    }(window, document, jQuery));
+    </script>
+</body>
+</html>
